@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,
+            //スクロール方向を逆転,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -78,27 +78,32 @@
 
         COMBO_CLICK1 {
             bindings = <&mkp MB1>;
-            key-positions = <13 12>;
+            key-positions = <16 17>;
         };
 
         COMBO_LAN1 {
             bindings = <&kp LANG1>;
-            key-positions = <16 17>;
+            key-positions = <27 28>;
         };
 
         COMBO_LANG2 {
             bindings = <&kp LANGUAGE_2>;
-            key-positions = <6 7>;
+            key-positions = <21 22>;
         };
 
         COMBO_CLICK2 {
             bindings = <&mkp MB2>;
-            key-positions = <13 12 11>;
+            key-positions = <17 18>;
         };
 
         COMBO_CLICK3 {
             bindings = <&mkp MB3>;
-            key-positions = <13 2 11>;
+            key-positions = <16 18>;
+        };
+
+        Scroll {
+            bindings = <&mo 5>;
+            key-positions = <17 16 18>;
         };
     };
 
