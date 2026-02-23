@@ -58,8 +58,8 @@
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_to_scroll_mapper>,
-            <&zip_wheel_scaler 1 3>; // 1/3 にして細かく
-            
+            <&zip_wheel_scaler 1 3>;
+ // 1/3 にして細かく
     };
 };
 
@@ -106,6 +106,16 @@
             bindings = <&mo 5>;
             key-positions = <17 16 18>;
         };
+
+        COMBO_ESC {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 1>;
+        };
+
+        COMBO_BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <13 12>;
+        };
     };
 
     behaviors {
@@ -138,10 +148,10 @@
 
         default_layer {
             bindings = <
-&kp Q                &kp W         &kp E   &kp R    &kp T                                &kp Y        &kp U  &kp I      &kp O         &kp P
-&mt3 LEFT_SHIFT A    &kp S         &kp D   &kp F    &kp G                                &kp H        &kp J  &kp K      &kp L         &mt3 RIGHT_SHIFT COLON
-&mt3 LEFT_CONTROL Z  &kp X         &kp C   &kp V    &kp B                                &kp N        &kp M  &kp COMMA  &kp DOT       &mt3 RIGHT_CONTROL MINUS
-&kp LEFT_ALT         &kp LEFT_WIN  &trans  &kp INS  &lt 4 SPACE  &mo 2    &kp BACKSPACE  &lt 3 ENTER         &mo 6      &kp LEFT_WIN  &mt3 RIGHT_ALT ESCAPE
+&kp Q                &kp W           &kp E   &kp R    &kp T                                &kp Y        &kp U  &kp I      &kp O             &kp P
+&mt3 LEFT_SHIFT A    &kp S           &kp D   &kp F    &kp G                                &kp H        &kp J  &kp K      &kp L             &mt3 RIGHT_SHIFT COLON
+&mt3 LEFT_CONTROL Z  &mt LEFT_WIN X  &kp C   &kp V    &kp B                                &kp N        &kp M  &kp COMMA  &mt LEFT_ALT DOT  &mt3 RIGHT_CONTROL MINUS
+&kp LEFT_ALT         &kp LEFT_WIN    &trans  &kp INS  &lt 4 SPACE  &mo 2    &kp BACKSPACE  &lt 3 ENTER         &mo 6      &kp LEFT_WIN      &mt3 RIGHT_ALT ESCAPE
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -194,7 +204,7 @@
 &trans     &trans  &trans  &trans  &trans   &trans    &kp DELETE  &kp N0          &trans  &trans   &trans
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_UP>;
         };
 
         //5
